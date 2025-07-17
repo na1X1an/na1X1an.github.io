@@ -1,0 +1,23 @@
+.image-container {
+  position: relative;
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.scorecard {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: sans-serif;
+}
