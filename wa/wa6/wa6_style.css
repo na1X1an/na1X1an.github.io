@@ -9,8 +9,8 @@ body {
   }
 
   img {
-      max-width: 100%;
-      display: block;
+    max-width: 100%;
+    display: block;
   }
   
   .logo {
@@ -24,15 +24,6 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
-    display: flex;
-  }
-
-  article {
-    flex: 2;
-  }
-
-  aside {
-    flex: 1;
   }
   
   nav {
@@ -41,7 +32,6 @@ body {
     position: sticky;
     top: 0px;
     z-index: 1000;
-    
   }
   
   nav ul {
@@ -70,8 +60,7 @@ body {
   }
 
   .photos li {
-
-  overflow: hidden;
+    overflow: hidden;
   }
 
   .feature {
