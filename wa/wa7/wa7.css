@@ -115,21 +115,63 @@ h1 {
 }
 
 #text_content p {
-    margin: .5vh;
-    font-size: 2vh;
+    margin: .5vw;
+    font-size: 1vw;
 }
 
 img{
+    top: 2.5vw;
+    right: 2.5vw;
     width:  30vw;
     height: 30vh;
 }
 
-#red-ball{
-    background-color: crimson;
-    width: 20px;
-    height:20px;
+#giza{
+    background-image: url(img/Giza.png);
+    background-size: 90%;
+    background-position: center;
+    width: 17vw;
+    height:17vw;
     border-radius: 50%;
+    border: .5vw solid seagreen;
     position: absolute;
     right:10vw;
     top:100;
+    animation: giza_wander 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes giza_wander{
+    from {
+        translate: 0vw 0;
+    }
+
+    10% {
+        translate: -10vw 20vh;
+    }
+
+    20% {
+        translate: 10vw 45vh;
+    }
+
+    30% {
+        translate: -10vw 65vh;
+    }
+
+    50% {
+        translate: -52vw 37vh;
+    }
+
+    60% {
+        translate: -58vw 40vh;
+    }
+
+    80% {
+        translate: -0vw 65vh;
+    }
+
+    to {
+        translate: 0vw 0;
+    }
+    
 }
