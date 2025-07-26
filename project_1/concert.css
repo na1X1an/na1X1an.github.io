@@ -8,30 +8,75 @@
     src: url('fonts/amelia_Regular.ttf') format('truetype');
 }
 
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+#tickets {
+  display: flex;
+  flex-direction: column; 
+}
+
+#sticky_nav {
+  position: sticky;
+  top: 5vw;
+  z-index: 1000;
+  width: 12vw;
+  height: 37vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: rgba(153, 50, 204, .5);
+  border: .5vw solid rgb(153, 50, 204);
+  margin: 5vw 0 0 4vw;
+}
+
+#sticky_nav a {
+  font-family: 'Data70';
+  text-decoration: none;
+  color: lavender;
+  padding-bottom: .5vw;
+  font-size: 1.2vw;
+  transition-duration: .5s;
+}
+
+#sticky_nav a:hover {
+  color: deeppink;
+}
+
 body {
-    background-color: lavender;
+    /* background-color: lavender; */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-image: url(img/nebula.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 header {
     border: .5vw solid darkorchid;
     height: 10vw;
-    width: 95vw;
+    margin: 2vw 4vw 0vw 4vw;
+
     display: flex;
     flex-direction: column;
-    background-image: url(img/void.jpg);
+    /* background-image: url(img/void.jpg);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     color: deeppink;
 }
 
 #head_content {
     height: 100%;
     width: 100%;
-    background-color: rgba(148, 0, 211, .5);
+    background-color: rgba(153, 50, 204, .5);
     display: flex;
     flex-direction: column;
 }
@@ -53,34 +98,115 @@ h2 {
 }
 
 article {
+    position: relative;
+    width: 71vw;
     font-family: Helvetica;
     border: .5vw solid darkorchid;
     margin-top: 5vw;
-    background-color: rgba(138, 43, 226, .2);
+    margin-left: 5vw;
+    /* background-color: rgba(138, 43, 226, .2); */
+    background-color: rgba(230, 230, 250, .9);
+    background-image: url(img/floral-pattern.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 p {
-    padding: .5vw;
+    font-family: 'LavaPro-Regular';
+    margin: 0;
+    padding: 1.5vw;
+    background-color: rgba(230, 230, 250, .8);
+    font-size: 1vw;
 }
 
 
+#ticket_info {
+    background-color: rgb(230, 230, 250, .9);
+}
+
 article h2 {
     font-family: 'Amelia';
+    color: black;
+    background-color: rgba(230, 230, 250, .6);
+    /* background-color: rgb(138, 43, 226, .5); */
+    /* background-color: rgba(255, 20, 147, .5); */
+    padding: 1.5vw 1.5vw 1vw 1.5vw;
     margin: 0;
-    padding: 1vw;
     font-size: 2vw;
 }
 
 article h3 {
-    font-family: 'Data70';
+    /* background-color: rgba(230, 230, 250, .7); */
+    font-size: 1.25vw;
+    background-color: rgba(255, 20, 147, .3);
     border-top: .3vw dotted darkorchid;
     border-bottom: .3vw dotted darkorchid;
-    padding: .5vw;
+    padding: 1.5vw;
     margin: 0;
 }
 
 img {
-    width: 40vw;
-    height: 40vw;
-    color: black;
+    top: 0;
+    right: 2vw;
+    padding: 1vw;
+    width: 10vw;
+    height: 10vw;
+    color: lavender;
+}
+
+footer {
+    border: .5vw solid darkorchid;
+    background-image: url(img/void.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 10vw;
+    margin: 4vw 4vw 2vw 4vw;
+}
+
+@media screen and (max-width: 600px)
+{
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body {
+        display: flex;
+        flex-direction: collumn;
+    }
+
+    p {
+        font-size: 1.5vw;
+    }
+    
+    article {
+        width: auto;
+        margin-right: 4vw;
+        margin-left: 4vw;
+    }
+
+    #sticky_nav {
+        top: 0;
+        height: 5vw;
+        width: auto; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 5vw 4vw 0 4vw;
+        background-color: darkorchid;
+   }
+
+   #sticky_nav a {
+        font-size: 1.5vw;
+        border-left: .5vw solid darkorchid;
+        margin: 0 .1vw 0 .1vw;
+        
+    }
+
+
 }
