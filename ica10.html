@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="main-header">Boring Header</h1>
+    </header>
+
+    <button type="button">What's on your mind?</button>
+    <script>
+        const btn = document. querySelector ("button");
+        btn-addEventListener('click', updateName);
+        function updateName () {
+        const name = prompt("Enter thoughts");
+        btn. textContent = `idea: ${name}`;
+        }
+
+        const header = document.getElementById("main-header");
+
+        header.addEventListener("mouseenter", () => {
+        header.style.color = "darkgreen";
+        header.style.transform = "scale(1.1)";
+        header.textContent = "Secret Message";
+        });
+
+        header.addEventListener("mouseleave", () => {
+        header.style.color = "";
+        header.style.transform = "";
+        header.textContent = "Boring Header";
+        });
+    </script>
+</body>
+</html>
