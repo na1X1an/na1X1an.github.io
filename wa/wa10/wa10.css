@@ -8,13 +8,16 @@
 }
 
     h1 {
-        font-family: 'Countdown';
         border: solid 1vw #3b1c42;
-        background-color: rgba(13, 13, 13, 1);
+        background-color: #0d0d0d;
+        width: 50vw;
+        height: 4vw;
+        margin: none;
+
+        font-family: 'Countdown';
+        text-align: center;
+        font-size: 4vw;
         color: #9e1b32;
-        width: 40vw;
-        justify-content: center;
-        align-content: center;
     }
       
       body {
@@ -23,7 +26,10 @@
         justify-items: center;
         align-items: center;
         font-family: helvetica, sans-serif;
-        width: 90vw;
+        
+        position: fixed;
+        left: 25vw;
+        width: 50vw;
         background-color: #c98a5f;
       }
 
@@ -32,22 +38,49 @@
       }
 
       div {
-        padding-bottom: 20px;
+        padding-bottom: none;
+      }
+
+      #inputs {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+  
+        width: 100%;
+        height: 2vw;
+        border: solid 1vw #3b1c42;
+
+        background-color: #0d0d0d;
+        color: #9e1b32;
+
       }
 
       input[type="text"] {
-        padding: 5px;
+        padding: none;
         width: 150px;
       }
 
 
       #input1 {
-
-        
+        padding: .5vw;
       }
+
+      #input2 {
+        padding: .5vw;
+      }
+
+      #generate {
+        padding: .5vw;
+      }
+
       p {
         background: #ffc125;
         color: #5e2612;
-        padding: 10px;
+        border: 1vw solid #3b1c42;
+        padding: .5vw;
+        width: 49vw;
         visibility: hidden;
       }
