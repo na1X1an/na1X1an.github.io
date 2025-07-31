@@ -1,0 +1,53 @@
+      @font-face {
+  font-family: 'Countdown';
+  src: url('fonts/countdown_Regular.otf') format('opentype');
+}
+@font-face {
+      font-family: 'Data70';
+  src: url('fonts/data70_Regular.otf') format('opentype');
+}
+
+    h1 {
+        font-family: 'Countdown';
+        border: solid 1vw #3b1c42;
+        background-color: rgba(13, 13, 13, 1);
+        color: #9e1b32;
+        width: 40vw;
+        justify-content: center;
+        align-content: center;
+    }
+      
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        font-family: helvetica, sans-serif;
+        width: 90vw;
+        background-color: #c98a5f;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      div {
+        padding-bottom: 20px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        width: 150px;
+      }
+
+
+      #input1 {
+
+        
+      }
+      p {
+        background: #ffc125;
+        color: #5e2612;
+        padding: 10px;
+        visibility: hidden;
+      }
