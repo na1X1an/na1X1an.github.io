@@ -1,8 +1,8 @@
-const imageFilenames = ["vincebus_eruptum.png", "dopethrone.png", "forest_of_equilibrium.png", "master_of_reality.png", "holy_mountain.png"];
+const imageFilenames = ["vincebus_eruptum.png", "dopethrone.png", "volume_4.png", "master_of_reality.png", "holy_mountain.png"];
 const imageAlts = {
   "vincebus_eruptum.png": "Blue Cheer's first album",
   "dopethrone.png": "Electric Wizard's third album",
-  "forest_of_equilibrium.png": "Cathedral's first album",
+  "volume_4.png": "Black Sabbath's fourth album",
   "master_of_reality.png": "Black Sabbath's third album",
   "holy_mountain.png": "Sleep's second album"
 };
