@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Countdown';
+  src: url('fonts/countdown_Regular.otf') format('opentype');
+}
+@font-face {
+      font-family: 'Data70';
+  src: url('fonts/data70_Regular.otf') format('opentype');
+}
+
+h1 {
+  font-family: 'Countdown';
+  font-size: 3vw;
+  text-align: center;
+  line-height: 1.75;
+
+  height: 5vw;
+  border: 1vw solid black;
+}
+
+body {
+  width: 40vw;
+  margin: 0 auto;
+}
+
+.full-img {
+  position: relative;
+  display: block;
+  width: 38vw;
+  height: 38vw;
+
+  border: 1vw solid black;
+  margin-bottom: 2vw;
+}
+
+img {
+  width: 38vw;
+  height: 38vw;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 38vw;
+  height: 38vw;
+  background-color: rgba(0,0,0,0);
+}
+
+button {
+  border: 0;
+  background: rgba(150,150,150,0.6);
+  text-shadow: 1px 1px 1px white;
+  border: 1px solid #999;
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  left: 2px;
+}
+
+.thumb-bar img {
+  height: 100%;
+  display: block;
+  width: 20%;
+  float: left;
+  cursor: pointer;
+}
+
+.thumb-bar {
+  height: 8vw;
+  border: 1vw solid black;
+}
