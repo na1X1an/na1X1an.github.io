@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #fafafa;
+  margin: 40px 20px;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Abacus Container */
+#abacus {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* Each Column (Digit) */
+.column {
+  position: relative;
+  width: 50px;
+  height: 300px;
+  background: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Internal Track to Position Beads */
+.track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Beads (Shared Style) */
+.bead {
+  width: 36px;
+  height: 20px;
+  background: #d2691e;
+  border-radius: 12px;
+  position: absolute;
+  left: 7px;
+  cursor: pointer;
+  transition: top 0.25s ease, background-color 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Upper bead has darker color */
+.bead.upper {
+  background-color: #a0522d;
+}
+
+/* Active beads have a darker tone */
+.bead[data-active="1"] {
+  background-color: #8b4513;
+}
+
+/* Phone Number Display */
+#phone-display {
+  font-size: 24px;
+  font-weight: bold;
+  background: #fff;
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  display: inline-block;
+}
