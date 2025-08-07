@@ -5,6 +5,8 @@ const BEAD_GAP = 4;
 const BEAD_HEIGHT = 20;
 const TOP_OFFSET = 10;
 
+let beadClickCount = 0;
+
 // Create 10 columns
 for (let col = 0; col < 10; col++) {
   const column = document.createElement('div');
@@ -15,14 +17,14 @@ for (let col = 0; col < 10; col++) {
   track.classList.add('track');
   column.appendChild(track);
 
-  // Add upper bead (5)
+  // Add upper beads
   const upperBead = document.createElement('div');
   upperBead.classList.add('bead', 'upper');
   upperBead.dataset.value = 5;
   upperBead.dataset.active = "0";
   track.appendChild(upperBead);
 
-  // Add 4 lower beads
+  // Add lower beadsw
   for (let i = 0; i < 4; i++) {
     const bead = document.createElement('div');
     bead.classList.add('bead', 'lower');
@@ -44,9 +46,9 @@ function updateBeadPositions() {
     const upperBead = beads.find(b => b.classList.contains('upper'));
     const lowerBeads = beads.filter(b => b.classList.contains('lower'));
 
-    // Move upper bead (5) - either up or down
+    // Move upper bead 
     const upperActive = upperBead.dataset.active === "1";
-    upperBead.style.top = upperActive ? '60px' : '10px';
+    upperBead.style.top = upperActive ? '5vw' : '.25vw';
 
     // Position lower beads based on how many are active
     lowerBeads.forEach((bead, i) => {
@@ -79,7 +81,6 @@ function updateDisplay() {
   phoneDisplay.textContent = phoneNumber;
 }
 
-// Event listener for bead clicks
 abacus.addEventListener('click', (e) => {
   if (!e.target.classList.contains('bead')) return;
 
@@ -92,14 +93,56 @@ abacus.addEventListener('click', (e) => {
     bead.dataset.active = bead.dataset.active === "1" ? "0" : "1";
   } else {
     const index = parseInt(bead.dataset.index, 10);
-    lowerBeads.forEach((b, i) => {
-      b.dataset.active = i <= index ? "1" : "0";
-    });
+
+// If all beads are currently active up to this index, allow toggle off
+const allActiveUpToIndex = lowerBeads.slice(0, index + 1).every(b => b.dataset.active === "1");
+const allInactiveAfterIndex = lowerBeads.slice(index + 1).every(b => b.dataset.active === "0");
+
+if (allActiveUpToIndex && allInactiveAfterIndex) {
+  // Toggle all off
+  lowerBeads.forEach(b => b.dataset.active = "0");
+} else {
+  // Activate all up to and including this one
+  lowerBeads.forEach((b, i) => {
+    b.dataset.active = i <= index ? "1" : "0";
+  });
+}
   }
 
   updateBeadPositions();
   updateDisplay();
+
+  beadClickCount++;
+
+  // Show submit button every 5th click
+  const submitBtn = document.getElementById('submit-btn');
+  if (beadClickCount % 5 === 0) {
+    submitBtn.style.display = 'inline-block';
+  } else {
+    submitBtn.style.display = 'none';
+  }
 });
 
-// Initial position
+document.getElementById('submit-btn').addEventListener('click', () => {
+  const number = document.getElementById('phone-number').textContent;
+
+  // Show the submitted number
+  alert(`Submitted number: ${number}`);
+
+  // Reset all beads
+  const allBeads = document.querySelectorAll('.bead');
+  allBeads.forEach(bead => {
+    bead.dataset.active = "0";
+    bead.classList.remove('active');
+  });
+
+  updateBeadPositions();
+
+  phoneDisplay.textContent = '0000000000';
+
+  document.getElementById('submit-btn').style.display = 'none';
+
+  beadClickCount = 0;
+});
+
 updateBeadPositions();
