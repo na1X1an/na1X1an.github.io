@@ -1,7 +1,7 @@
 const abacus = document.getElementById('abacus');
 const phoneDisplay = document.getElementById('phone-number');
 
-const BEAD_HEIGHT_VW = 1.5;   // 1vw = approx 20px on a 1920px-wide screen
+const BEAD_HEIGHT_VW = 1.5;  
 const BEAD_GAP_VW = .4;
 const BASE_TOP_VW_ACTIVE = 5;   // replaces 160px
 const BASE_TOP_VW_INACTIVE = 12;
