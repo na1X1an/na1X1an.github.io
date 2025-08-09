@@ -1,9 +1,10 @@
 const abacus = document.getElementById('abacus');
 const phoneDisplay = document.getElementById('phone-number');
 
-const BEAD_GAP = 4;
-const BEAD_HEIGHT = 20;
-const TOP_OFFSET = 10;
+const BEAD_HEIGHT_VW = 1.5;   // 1vw = approx 20px on a 1920px-wide screen
+const BEAD_GAP_VW = .4;
+const BASE_TOP_VW_ACTIVE = 5;   // replaces 160px
+const BASE_TOP_VW_INACTIVE = 12;
 
 let beadClickCount = 0;
 
@@ -46,19 +47,22 @@ function updateBeadPositions() {
     const upperBead = beads.find(b => b.classList.contains('upper'));
     const lowerBeads = beads.filter(b => b.classList.contains('lower'));
 
-    // Move upper bead 
+    // Move upper bead
     const upperActive = upperBead.dataset.active === "1";
-    upperBead.style.top = upperActive ? '5vw' : '.25vw';
+    upperBead.style.top = upperActive ? '2.5vw' : '.75vw';
 
-    // Position lower beads based on how many are active
+    // Position lower beads
+    const activeCount = lowerBeads.filter(b => b.dataset.active === "1").length;
+
     lowerBeads.forEach((bead, i) => {
-      const activeCount = lowerBeads.filter(b => b.dataset.active === "1").length;
       const isActive = i < activeCount;
-      const positionIndex = isActive ? 3 - i : 3 + (3 - i); // stack downwards
+      const positionIndex = isActive ? 3 - i : 3 + (3 - i); // stack down or up
 
-      bead.style.top = isActive
-        ? `${120 + positionIndex * (BEAD_HEIGHT + BEAD_GAP)}px`
-        : `${200 + i * (BEAD_HEIGHT + BEAD_GAP)}px`;
+      const top = isActive
+        ? BASE_TOP_VW_ACTIVE + positionIndex * (BEAD_HEIGHT_VW + BEAD_GAP_VW)
+        : BASE_TOP_VW_INACTIVE + i * (BEAD_HEIGHT_VW + BEAD_GAP_VW);
+
+      bead.style.top = `${top}vw`;
     });
   });
 }

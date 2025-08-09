@@ -1,19 +1,32 @@
+html {
+  font-family: Helvetica, sans-serif;
+}
+
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #fafafa;
+  background-color: #cdb7a0;
   margin: 10vw 10vw;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
   margin-bottom: 2.5vw;
+  border: .5vw solid darkgreen;
+  background-color: #f3e9dc;
+  width: 50%;
+  text-align: center;
+  align-self: center;
 }
 #abacus {
   display: flex;
   justify-content: center;
   gap: 2vw;
-  margin-bottom: 5vw;
+  margin-bottom: 2vw;
+  width: 100%;
   flex-wrap: wrap;
 }
 
@@ -21,7 +34,7 @@ h1 {
   position: relative;
   width: 3vw;
   height: 20vw;
-  background: floralwhite;
+  background: #f3e9dc;
   border: .5vw solid darkgreen;
   overflow: hidden;
 }
@@ -52,27 +65,36 @@ h1 {
 }
 
 button {
-  border: .25vw solid darkgreen;
-  background-color: floralwhite;
-  height: 100%;
+  border: .5vw solid darkgreen;
+  background-color: #f3e9dc;
+  height: 3vw;
   padding: none;
   margin: none;
+  width: 40%;
+  font-size: 1vw;
+  font-family: Helvetica, sans-serif;
+  text-justify: center;
 }
 
-#display+button {
-  height: 3vw;
-  justify-items: center;
+#display-button {
+  /* justify-content: center; */
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  width: 100%;
+  margin: none;
+  /* height: 5vw; */
 }
 
 #phone-display {
   font-size: 2vw;
   font-weight: bold;
-  background: floralwhite;
+  background: #f3e9dc;
   padding: .5vw 1vw;
-  border: 2px solid #ccc;
-  display: inline-block;
-  height: 100%;
+  border: .5vw solid darkgreen;
+  /* display: inline-block; */
+  height: 40%;
+  margin-bottom: .5vw;
+  width: 40%;
+  text-align: center;
 }
