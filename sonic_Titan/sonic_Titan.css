@@ -27,13 +27,13 @@ header {
     position: fixed;
     top: 2.5vw;    
     right: 2.5vw;
-    width: 10vw;
-    height: 10vw;
-    background-image: url('img/Giza.png');
+    width: 27vw;
+    height: 20vw;
+    background-image: url('img/Sonic\ Titan\ Logo\ Outline.pdf');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: .5vw solid black;
+    border: none;
 }
 
 
@@ -139,7 +139,7 @@ h1 {
 
 #text_content p {
     margin: .5vw;
-    font-size: 1vw;
+    font-size: 1.25vw;
     font-family: 'LavaPro-Regular';
 }
 

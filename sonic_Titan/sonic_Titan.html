@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sonic_Titan.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
     <link href="https://db.onlinewebfonts.com/c/4952b6921699ca6d64b6b5262424fc9d?family=LavaPro-Regular" rel="stylesheet">
     <title>Sonic Titan Portal</title>
@@ -12,7 +13,7 @@
 <body>
     <header>
     <div id="head_container">
-    <h1>Sonic Titan</h1> <!--change this text-->
+    <h1>Sonic Titan</h1> 
     </div>
     <div id="logo">
 
@@ -22,16 +23,33 @@
     </div>
     <div id="nav_box">
     <nav>
-        <a>Home</a>
-        <a>About</a>
-        <a>Projects</a>
-        <a>Shows</a>
-        <a>Socials</a>
+        <a href="#" data-section="home">Home</a>
+        <a href="#" data-section="about">About</a>
+        <a href="#" data-section="projects">Projects</a>
+        <a href="#" data-section="shows">Shows</a>
+        <a href="#" data-section="socials">Socials</a>
     </nav>
     </div>
     <div id="text_content">
-    <p>Welcome to the Sonic Titan Portal.</p>
+        <div class="content-section" id="home">
+            <p>Welcome to the Sonic Titan Portal. We are currently working on outfitting the website with more cool stuff, so in the mean time, enjoy what we have. </p>
+        </div>
+        <div class="content-section" id="about" style="display:none;">
+            <p>Sonic Titan is Kian (Guitar, Fuzz, Vocals), Brody (P Bass, Muff, Rat, Ampeg, Peavey, Yelling), and Chuck (Drums).</p>
+        </div>
+        <div class="content-section" id="projects" style="display:none;">
+            <p>Coming very soon...</p>
+            <p><a href="sonictitandoom.bandcamp.com">sonictitandoom.bandcamp.com</a></p>
+        </div>
+        <div class="content-section" id="shows" style="display:none;">
+            <p>Coming soon...</p>
+            <p>Email us at hailsonictitan@gmail.com for booking.</p>
+        </div>
+        <div class="content-section" id="socials" style="display:none;">
+            <p>Follow us on instagram @sonictitandoom for updates on our projects and shows.</p>
+        </div>
     </div>
-    <!-- <img src="img/malchite_Background.jpg"> -->
+
+    <script src="sonic_Titan.js"></script>
 </body>
 </html>
